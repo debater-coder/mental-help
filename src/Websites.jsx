@@ -19,6 +19,7 @@ export default function Websites() {
                 mx="auto"
                 bg={useColorModeValue("white", "gray.800")}
                 shadow="xl"
+                rounded={8}
             >
                 <Box textAlign={{lg: "center"}}>
                     <chakra.p
