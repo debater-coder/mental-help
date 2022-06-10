@@ -24,6 +24,7 @@ export default ({children, color, href, icon, title}) => {
                         viewBox="0 0 20 20"
                         fill="currentColor"
                         aria-hidden="true"
+                        margin={"auto"}
                     >
                         {icon}
                     </Icon>

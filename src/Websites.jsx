@@ -1,8 +1,12 @@
 import React from "react";
 import {Box, chakra, Flex, SimpleGrid, useColorModeValue,} from "@chakra-ui/react";
 import {PhoneIcon} from "@chakra-ui/icons";
-import {FaBrain, FaDog, FaLeaf} from "react-icons/all";
+import {FaBrain, FaDog, FaLeaf, FaQuestion, FaTeeth, FaTeethOpen} from "react-icons/all";
 import Feature from "./Feature";
+
+function FaTeethOPen() {
+    return null;
+}
 
 export default function Websites() {
     return (
@@ -12,6 +16,17 @@ export default function Websites() {
             w="auto"
             justifyContent="center"
             alignItems="center"
+            _after={{
+                content: '""',
+                borderTopLeftRadius: "100%",
+                borderTopRightRadius: "100%",
+                position: "absolute",
+                bottom: 0,
+                zIndex: -1,
+                width: "100%",
+                height: "75%",
+                backgroundColor: useColorModeValue("#F9FAFB", "gray.600")
+            }}
         >
             <Box
                 px={8}
@@ -19,7 +34,7 @@ export default function Websites() {
                 mx="auto"
                 bg={useColorModeValue("white", "gray.800")}
                 shadow="xl"
-                rounded={8}
+                rounded={20}
             >
                 <Box textAlign={{lg: "center"}}>
                     <chakra.p
@@ -71,7 +86,7 @@ export default function Websites() {
                     </Feature>
 
                     <Feature
-                        color="yellow"
+                        color="gray"
                         title="Black Dog Institute"
                         href={"https://www.blackdoginstitute.org.au/"}
                         icon={
@@ -94,32 +109,24 @@ export default function Websites() {
 
                     <Feature
                         color="yellow"
-                        title="RUOK"
+                        title="R U OK"
                         href={"https://www.ruok.org.au/"}
                         icon={
-                            <path
-                                fillRule="evenodd"
-                                d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z"
-                                clipRule="evenodd"
-                            />
+                            <FaQuestion />
                         }
                     >
-                        RUOK is pretty good.
+                        R U OK is a resource to help you help others suffering mental problems.
                     </Feature>
 
                     <Feature
-                        color="yellow"
+                        color="blue"
                         title="Bite Back"
                         href={"https://www.biteback.org.au/"}
                         icon={
-                            <path
-                                fillRule="evenodd"
-                                d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z"
-                                clipRule="evenodd"
-                            />
+                            <FaTeethOpen />
                         }
                     >
-                        Biteback is pretty good.
+                        Bite Back is a mental fitness challenge to help you improve your mental fitness, increase your happiness, reduce stress, improve your friendship and your focus.
                     </Feature>
 
                 </SimpleGrid>
