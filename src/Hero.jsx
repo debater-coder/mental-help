@@ -1,7 +1,21 @@
 import React from "react";
-import {Box, chakra, Image, Text, useColorModeValue,} from "@chakra-ui/react";
+import {
+    Alert,
+    AlertIcon,
+    AlertTitle,
+    Box, Button,
+    chakra,
+    Heading,
+    Image, Spacer,
+    Stack,
+    Text,
+    useColorModeValue,
+} from "@chakra-ui/react";
+import {CopyIcon} from "@chakra-ui/icons";
 
 const Hero = () => {
+    const copy = text => () => navigator.clipboard.writeText(text)
+
     return (
         <Box px={8} py={24} mx="auto">
             <Box
@@ -37,11 +51,21 @@ const Hero = () => {
                 >
                     PsychoX mental help directory is a place to find all your favourite mental health services.
                 </chakra.p>
+                <Alert status={'error'} rounded={8} maxWidth={"fit-content"} ml={"auto"} mr={"auto"}>
+                    <AlertIcon />
+                    <AlertTitle>If life is in danger call 000.</AlertTitle>
+                </Alert>
+                <Stack direction={"row"} mt={5}>
+                    <Spacer />
+                    <Button onClick={copy("13 11 14")} leftIcon={<CopyIcon />}>Copy Lifeline Phone Number</Button>
+                    <Button onClick={copy("1800 55 1800")} leftIcon={<CopyIcon />}>Copy Kids Helpline Phone Number</Button>
+                    <Spacer />
+                </Stack>
             </Box>
             <Box
                 w={{base: "full", md: 10 / 12}}
                 mx="auto"
-                mt={20}
+                mt={10}
                 textAlign="center"
             >
                 <Image

@@ -5,7 +5,7 @@ export default ({children, color, href, icon, title}) => {
         <a href={href} target={"_blank"}>
             <Flex
                 direction={"column"}
-                _hover={{bg: useColorModeValue("gray.200", "gray.500")}}
+                _hover={{bg: useColorModeValue("gray.200", "gray.700")}}
                 p={2}
                 rounded={10}
             >
@@ -19,15 +19,7 @@ export default ({children, color, href, icon, title}) => {
                     color={useColorModeValue(`${color}.600`, `${color}.100`)}
                     bg={useColorModeValue(`${color}.100`, `${color}.600`)}
                 >
-                    <Icon
-                        boxSize={5}
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                        margin={"auto"}
-                    >
-                        {icon}
-                    </Icon>
+                    <Icon as={icon} />
                 </Flex>
                 <chakra.h3
                     mb={2}

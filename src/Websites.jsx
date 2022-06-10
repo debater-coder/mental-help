@@ -1,8 +1,9 @@
 import React from "react";
 import {Box, chakra, Flex, SimpleGrid, useColorModeValue,} from "@chakra-ui/react";
 import {PhoneIcon} from "@chakra-ui/icons";
-import {FaBrain, FaDog, FaLeaf, FaQuestion, FaTeeth, FaTeethOpen} from "react-icons/all";
+import {FaBrain, FaDog, FaLeaf, FaLifeRing, FaQuestion, FaTeeth, FaTeethOpen} from "react-icons/all";
 import Feature from "./Feature";
+import "./wave.css"
 
 function FaTeethOPen() {
     return null;
@@ -16,15 +17,8 @@ export default function Websites() {
             w="auto"
             justifyContent="center"
             alignItems="center"
+            className={"wave-1"}
             _after={{
-                content: '""',
-                borderTopLeftRadius: "100%",
-                borderTopRightRadius: "100%",
-                position: "absolute",
-                bottom: 0,
-                zIndex: -1,
-                width: "100%",
-                height: "75%",
                 backgroundColor: useColorModeValue("#F9FAFB", "gray.600")
             }}
         >
@@ -54,7 +48,7 @@ export default function Websites() {
                         mx={{lg: "auto"}}
                         color={useColorModeValue("gray.500", "gray.400")}
                     >
-                        These websites will help you improve your mental health
+                        These websites will help you improve your mental health.
                     </chakra.p>
                 </Box>
                 <SimpleGrid
@@ -64,12 +58,19 @@ export default function Websites() {
                     mt={6}
                 >
                     <Feature
+                        color="blue"
+                        title="Lifeline"
+                        href={"https://www.lifeline.org.au/"}
+                        icon={FaLifeRing}
+                    >
+                        Lifeline is a crisis support helpine if you or someone you know is currently experiencing a crisis.
+                    </Feature>
+
+                    <Feature
                         color="red"
                         title="Kids Helpline"
                         href={"https://kidshelpline.com.au/"}
-                        icon={
-                            <PhoneIcon/>
-                        }
+                        icon={PhoneIcon}
                     >
                         Kids Helpline is one of the most trusted children mental health websites.
                     </Feature>
@@ -78,9 +79,7 @@ export default function Websites() {
                         color="green"
                         title="Better Help"
                         href={"https://www.betterhelp.com/"}
-                        icon={
-                            <FaLeaf/>
-                        }
+                        icon={FaLeaf}
                     >
                         Better Help is one of the leading mental heath websites which is easily accessible.
                     </Feature>
@@ -89,9 +88,7 @@ export default function Websites() {
                         color="gray"
                         title="Black Dog Institute"
                         href={"https://www.blackdoginstitute.org.au/"}
-                        icon={
-                            <FaDog/>
-                        }
+                        icon={FaDog}
                     >
                         Black Dog Institute is an excellent resource for helping you fix your mental help problems.
                     </Feature>
@@ -100,9 +97,7 @@ export default function Websites() {
                         color="orange"
                         title="Headspace"
                         href={"https://www.headspace.com/"}
-                        icon={
-                            <FaBrain/>
-                        }
+                        icon={FaBrain}
                     >
                         Headspace is the perfect app to help you 'be kind to your mind'.
                     </Feature>
@@ -111,9 +106,7 @@ export default function Websites() {
                         color="yellow"
                         title="R U OK"
                         href={"https://www.ruok.org.au/"}
-                        icon={
-                            <FaQuestion />
-                        }
+                        icon={FaQuestion}
                     >
                         R U OK is a resource to help you help others suffering mental problems.
                     </Feature>
@@ -122,9 +115,7 @@ export default function Websites() {
                         color="blue"
                         title="Bite Back"
                         href={"https://www.biteback.org.au/"}
-                        icon={
-                            <FaTeethOpen />
-                        }
+                        icon={FaTeethOpen}
                     >
                         Bite Back is a mental fitness challenge to help you improve your mental fitness, increase your happiness, reduce stress, improve your friendship and your focus.
                     </Feature>
